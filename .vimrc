@@ -53,14 +53,26 @@ set number
 syntax enable
 filetype plugin indent on
 set background=dark
+set visualbell  " No beeps
+set scrolloff=8 " Start scrolling 8 lines away from margins
+:imap jj <Esc>
 colorscheme solarized
 let g:Powerline_colorscheme = 'skwp' " Solarized colors for Powerline
+
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+
 
 "--- VimClojure -----------
 
 let vimclojure#HighlightBuiltins=1  " Highlight Clojure's builtins
 let vimclojure#ParenRainbow=1       " Rainbow parentheses
 
-"--- NERDTree -----------
+"--- NERDTree -------------
 
 nmap <silent> <c-n> :NERDTreeToggle<CR>
+
+"--- Latex Suite ----------
+
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf, aux'
