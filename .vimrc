@@ -9,7 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles: --------------------------------
-" Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'gmarik/sudo-gui.vim'
@@ -18,6 +18,7 @@ Bundle 'tpope/vim-surround'
 Bundle "git://git.wincent.com/command-t.git"
 Bundle 'L9'
 Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'majutsushi/tagbar'
 
 " Color Themes:
 Bundle 'altercation/vim-colors-solarized'
@@ -55,12 +56,17 @@ filetype plugin indent on
 set background=dark
 set visualbell  " No beeps
 set scrolloff=8 " Start scrolling 8 lines away from margins
-:imap jj <Esc>
+imap jj <Esc>
+nnoremap ; :
+se t_Co=16
+let g:solarized_termcolors = 16
 colorscheme solarized
 let g:Powerline_colorscheme = 'skwp' " Solarized colors for Powerline
-
+nnoremap <silent> <C-l> <C-w>l
+nnoremap <silent> <C-h> <C-w>h
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
+set laststatus=2
 
 
 "--- VimClojure -----------
