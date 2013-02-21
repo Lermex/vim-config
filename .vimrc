@@ -60,8 +60,8 @@ imap jj <Esc>
 nnoremap ; :
 se t_Co=16
 let g:solarized_termcolors = 16
-colorscheme solarized
-let g:Powerline_colorscheme = 'skwp' " Solarized colors for Powerline
+" colorscheme solarized
+" let g:Powerline_colorscheme = 'skwp' " Solarized colors for Powerline
 nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <C-h> <C-w>h
 set grepprg=grep\ -nH\ $*
@@ -75,6 +75,8 @@ let vimclojure#HighlightBuiltins=1  " Highlight Clojure's builtins
 let vimclojure#ParenRainbow=1       " Rainbow parentheses
 
 "--- NERDTree -------------
+
+nmap <C-N><C-N> :set invnumber<CR>
 
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 
