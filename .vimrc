@@ -4,7 +4,7 @@ filetype off
 " Vundle Config: -------------------------
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 Bundle 'gmarik/Vundle.vim'
 
